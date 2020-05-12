@@ -1,26 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.scss";
+import CartPreview from "./components/cartPreview/CartPreview";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [total, setTotal] = useState(100);
+  const [savings, setSavings] = useState(-5.25);
+  const [taxes, setTaxes] = useState(0);
+  const [estimatedTotal, setEstimatedTotal] = useState(0);
+
+  return <CartPreview />;
 }
 
 export default App;
