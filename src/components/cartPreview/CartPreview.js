@@ -8,8 +8,8 @@ import { connect } from "react-redux";
 const CartPreview = ({
   price,
   savings,
-  taxes = 0,
-  total = 0,
+  taxes = 0.0,
+  total = 0.0,
   products = [],
 }) => {
   return (
@@ -23,7 +23,7 @@ const CartPreview = ({
           <Savings savings={savings} />
           <Row>
             <Col md={6}>Est. Taxes and Fees for 56562</Col>
-            <Col md={6}>{taxes.toFixed(2)}</Col>
+            {/* <Col md={6}>{taxes ? taxes.toFixed(2) : ""}</Col> */}
           </Row>
           <hr />
           <Row>
@@ -32,7 +32,7 @@ const CartPreview = ({
             </Col>
             <Col md={6}>{`$${total.toFixed(2)}`}</Col>
           </Row>
-          <ItemList productList={products} />
+          <ItemList productList={products} variant="collapse" />
           <hr />
           <PromoCode />
         </div>
@@ -43,7 +43,7 @@ const CartPreview = ({
 
 const mapStateToProps = (state) => {
   return {
-    taxes: state.taxes,
+    taxes: state.promoCode,
   };
 };
 

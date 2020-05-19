@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import "./App.scss";
 import CartPreview from "./components/cartPreview/CartPreview";
+import Layout from "./components/Layout";
+import Navigation from "./components/navigation/Navigation";
 
 function App() {
-  const [total, setTotal] = useState(100);
-  const [savings, setSavings] = useState(-5.25);
-  const [taxes, setTaxes] = useState(0);
-  const [estimatedTotal, setEstimatedTotal] = useState(0);
-
-  return <CartPreview />;
+  return (
+    <>
+      <Navigation />
+      {/* <Layout /> */}
+    </>
+  );
 }
 
 export default App;

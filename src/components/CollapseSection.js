@@ -6,7 +6,7 @@ export default function CollapseSection({
   openText,
   closedText,
 }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <div>

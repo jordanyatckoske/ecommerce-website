@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CollapseSection from "../CollapseSection";
 import { Form, Col, Row, Container, Button } from "react-bootstrap";
 import { connect } from "react-redux";
-import { handleChange } from "../../store/actions/promoCodeActions";
+import { handleChange } from "../../redux/actions/promoCodeActions";
 
 const PromoCode = ({ handleChange, promoCode }) => {
   const [isDisabled, setIsDisabled] = useState(false);
